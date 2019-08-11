@@ -14,7 +14,7 @@ if torch.cuda.is_available():
 
 from pointnet import PointNetCls
 
-MODEL_PATH = 'data/cls_model.pth'
+MODEL_PATH = 'model/cls_model.pth'
 
 class Classifier:
     def __init__(self, num_classes, num_points):

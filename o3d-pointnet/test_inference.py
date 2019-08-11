@@ -14,7 +14,7 @@ download.download_contents()
 
 class Dataset:
     def __init__(self, num_points):
-        DATA_FOLDER = './shapenetcore_partanno_segmentation_benchmark_v0'
+        DATA_FOLDER = 'shapenetcore_partanno_segmentation_benchmark_v0'
         self.num_points = num_points
 
         self.test_dataset_seg = PartDataset(
@@ -60,10 +60,10 @@ cloud = o3.PointCloud()
 MAX_SAMPLES = 10 
 
 for i in range(MAX_SAMPLES):
-    sample_ix = i*100
+    sample_ix = i*150 
     print('[Sample {} / {}]'.format(sample_ix, ds.num_samples))
 
-    point_set, seg = ds.get_sample(sample_ix, max_points=100)
+    point_set, seg = ds.get_sample(sample_ix, max_points=1000)
 
     cloud.points = o3.Vector3dVector(point_set)
     cloud.colors = o3.Vector3dVector(read_pointnet_colors(seg.numpy()))
