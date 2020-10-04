@@ -17,9 +17,8 @@ def get_angular_error(R_exp, R_est):
     return abs(np.arccos(min(max(((np.matmul(R_exp.T, R_est)).trace() - 1) / 2, -1.0), 1.0)));
 
 def load_data(filpath):
-    # Load bunny ply file
-    src_cloud = o3d.io.read_point_cloud("../example_data/bun_zipper_res3.ply")
-    src = np.transpose(np.asarray(src_cloud.points))
+    src_cloud = o3d.io.read_point_cloud("./floor_data.ply") 
+    src = np.transpose(np.asarray(src_cloud.points)) / 100.0
 
     N = src.shape[1]
 
@@ -79,7 +78,7 @@ if __name__ == "__main__":
     print("        TEASER++ Python registration example      ")
     print("==================================================")
 
-    src, dst, T = load_data("../example_data/bun_zipper_res3.ply")
+    src, dst, T = load_data("./bun_data.ply")
 
     start = time.time()
     r = Registration()
