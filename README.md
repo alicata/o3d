@@ -1,5 +1,5 @@
 # o3d
-experiments with 3D point cloud classification
+Experiments with 3D point cloud classification
 
 ## 
 * o3d-pointnet    : 3d object classification
