@@ -1,7 +1,7 @@
 # o3d
-experiments with 3d ML/DL
+experiments with 3D point cloud classification
 
 ## 
 * o3d-pointnet    : 3d object classification
-* o3d-registration: 3d point cloud registration  
-* o3d-voxbox       : api for MagicaVoxel
+* o3d-registration: 3d point cloud tool for registration  
+* o3d-voxbox       : voxel generation, api for MagicaVoxel
